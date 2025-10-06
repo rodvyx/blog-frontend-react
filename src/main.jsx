@@ -15,7 +15,8 @@ import { CommentProvider } from "./context/CommentContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {/* 👇 Important fix for GitHub Pages routing */}
+    <BrowserRouter basename="/blog-frontend-react">
       <AuthProvider>
         <BlogProvider>
           <CommentProvider>
