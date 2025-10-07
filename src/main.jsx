@@ -15,8 +15,8 @@ import { CommentProvider } from "./context/CommentContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* 👇 Important fix for GitHub Pages routing */}
-    <BrowserRouter basename="/blog-frontend-react">
+    {/* ✅ For Vercel and local dev — NO basename */}
+    <BrowserRouter>
       <AuthProvider>
         <BlogProvider>
           <CommentProvider>
